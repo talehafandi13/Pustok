@@ -1,0 +1,45 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto my-4">
+            <form asp-action="edit" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <input asp-for="Title" class="form-control text-light">
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SubTitle" class="form-label">SubTitle</label>
+                    <input asp-for="SubTitle" class="form-control text-light">
+                    <span asp-validation-for="SubTitle"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Desc" class="form-label">Description</label>
+                    <input asp-for="Desc" class="form-control text-light">
+                    <span asp-validation-for="Desc"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BtnText" class="form-label">BtnText</label>
+                    <input asp-for="BtnText" class="form-control text-light">
+                    <span asp-validation-for="BtnText"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BtnUrl" class="form-label">BtnUrl</label>
+                    <input asp-for="BtnUrl" class="form-control text-light">
+                    <span asp-validation-for="BtnUrl"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageFile" class="form-label">ImageFile</label>
+                    <input asp-for="ImageFile" class="form-control">
+                    <span asp-validation-for="ImageFile"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model List<Author>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto my-5">
+            <a asp-action="create" class="btn btn-info my-3">Create</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">FullName</th>
+                        <th scope="col">Birthdate</th>
+                        <th scope="col">Book Count</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var author in Model)
+                    {
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>@author.FullName</td>
+                            <td>@author.BirthDate</td>
+                            <td>@author.Books.Count()</td>
+                            <td>
+                                <a asp-action="edit" asp-route-id="@author.Id" class="btn btn-warning">Edit</a>
+                                <a asp-action="delete" asp-route-id="@author.Id" class="btn btn-danger sweet-delete">Delete</a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

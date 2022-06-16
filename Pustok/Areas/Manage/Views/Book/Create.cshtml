@@ -1,0 +1,80 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto my-4">
+            <form asp-action="create" method="post">
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Name</label>
+                    <input asp-for="Name" class="form-control text-light">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label asp-for="GenreId" class="form-label">Genre</label>
+                        <select asp-for="GenreId" class="form-select" asp-items="new SelectList((List<Genre>)ViewBag.Genres,nameof(Genre.Id),nameof(Genre.Name))">
+                        </select>
+                        <span asp-validation-for="GenreId"></span>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label asp-for="AuthorId" class="form-label">Author</label>
+                        <select asp-for="AuthorId" class="form-select" asp-items="new SelectList((List<Author>)ViewBag.Authors,nameof(Author.Id),nameof(Author.FullName))">
+                        </select>
+                        <span asp-validation-for="AuthorId"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label asp-for="CostPrice" class="form-label">CostPrice</label>
+                        <input asp-for="CostPrice" class="form-control text-light">
+                        <span asp-validation-for="CostPrice"></span>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label asp-for="SalePrice" class="form-label">SalePrice</label>
+                        <input asp-for="SalePrice" class="form-control text-light">
+                        <span asp-validation-for="SalePrice"></span>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label asp-for="DiscountPercent" class="form-label">DiscountPercent</label>
+                        <input asp-for="DiscountPercent" class="form-control text-light">
+                        <span asp-validation-for="DiscountPercent"></span>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label asp-for="PageSize" class="form-label">PageSize</label>
+                        <input asp-for="PageSize" class="form-control text-light">
+                        <span asp-validation-for="PageSize"></span>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label asp-for="Rate" class="form-label">Rate</label>
+                        <input asp-for="Rate" class="form-control text-light">
+                        <span asp-validation-for="Rate"></span>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" asp-for="IsAvailable">
+                            <label class="form-check-label" asp-for="IsAvailable">
+                                IsAvailable
+                            </label>
+                        </div>
+                        <span asp-validation-for="IsAvailable"></span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="SubDesc" class="form-label">SubDesc</label>
+                    <input asp-for="SubDesc" class="form-control text-light">
+                    <span asp-validation-for="SubDesc"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Desc" class="form-label">Desc</label>
+                    <textarea asp-for="Desc" class="form-control text-light"></textarea>
+                    <span asp-validation-for="Desc"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
