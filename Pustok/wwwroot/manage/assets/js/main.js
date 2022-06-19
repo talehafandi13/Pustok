@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".sweet-delete").click(function (e) {
         e.preventDefault();
         Swal.fire({
@@ -30,4 +31,10 @@ $(document).ready(function () {
         })
     })
 
-})
+    //$(".book-remove.fw-bold").click(function (e) {
+    //     //$(this).parent().remove();
+    //    console.log("alert");
+    //})
+
+    
+})  

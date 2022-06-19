@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,9 +26,19 @@ namespace Pustok.Models
         public int PageSize { get; set; }
         public bool IsAvailable { get; set; }
         public byte Rate { get; set; }
-
+        public bool IsNew { get; set; }
+        public bool IsFeatured { get; set; }
         public Genre Genre { get; set; }
         public Author Author { get; set; }
-        public List<BookImage> BookImages { get; set; }
+        public List<BookTag> bookTags { get; set; } = new List<BookTag>();
+        [NotMapped]
+        public List<int> TagIds { get; set; }
+        public List<BookImage> BookImages { get; set; } = new List<BookImage>();
+        [NotMapped]
+        public List<IFormFile> ImageFiles { get; set; }
+        [NotMapped]
+        public IFormFile PosterFile { get; set; }
+        [NotMapped]
+        public IFormFile HoverFile { get; set; }
     }
 }

@@ -65,6 +65,12 @@ namespace Pustok.Migrations
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsFeatured")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsNew")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(250)")
@@ -236,13 +242,13 @@ namespace Pustok.Migrations
             modelBuilder.Entity("Pustok.Models.BookTag", b =>
                 {
                     b.HasOne("Pustok.Models.Book", "Book")
-                        .WithMany()
+                        .WithMany("bookTags")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Pustok.Models.Tag", "Tag")
-                        .WithMany()
+                        .WithMany("bookTags")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

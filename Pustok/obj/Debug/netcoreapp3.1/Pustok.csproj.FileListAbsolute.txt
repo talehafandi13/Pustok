@@ -152,7 +152,6 @@ C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Ma
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Slider\Create.cshtml.g.cs
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Slider\Edit.cshtml.g.cs
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Genre\Index.cshtml.g.cs
-C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Pustok.csproj.AssemblyReference.cache
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Genre\Create.cshtml.g.cs
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Genre\Edit.cshtml.g.cs
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Author\Index.cshtml.g.cs
@@ -161,3 +160,7 @@ C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Ma
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Book\Index.cshtml.g.cs
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Tag\Index.cshtml.g.cs
 C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Book\Create.cshtml.g.cs
+C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Dashboard\Error.cshtml.g.cs
+C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Book\Edit.cshtml.g.cs
+C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Pustok.csproj.AssemblyReference.cache
+C:\Users\Taleh\source\repos\Pustok\Pustok\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BookTabSliderPartial.cshtml.g.cs

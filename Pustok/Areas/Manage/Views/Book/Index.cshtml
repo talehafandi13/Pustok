@@ -1,11 +1,12 @@
 ﻿@model List<Book>
 @{
     ViewData["Title"] = "Index";
+    int count = 0;
 }
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 mx-auto my-5">
+        <div class="col-md-12 mx-auto my-5">
             <a asp-action="create" class="btn btn-info my-3">Create</a>
             <table class="table">
                 <thead>
@@ -22,8 +23,9 @@
                 <tbody>
                     @foreach (var book in Model)
                     {
+                        count++;
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">@count</th>
                             <td>@book.Name</td>
                             <td>@book.Author.FullName</td>
                             <td>@book.Genre.Name</td>

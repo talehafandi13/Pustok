@@ -5,28 +5,34 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 mx-auto my-4">
-            <form asp-action="create" method="post">
+        <div class="col-md-10 mx-auto my-4">
+            <form asp-action="create" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label asp-for="Name" class="form-label">Name</label>
                     <input asp-for="Name" class="form-control text-light">
                     <span asp-validation-for="Name"></span>
                 </div>
                 <div class="row">
-                    <div class="mb-3 col-md-6">
+                    <div class="mb-3 col-md-4">
                         <label asp-for="GenreId" class="form-label">Genre</label>
                         <select asp-for="GenreId" class="form-select" asp-items="new SelectList((List<Genre>)ViewBag.Genres,nameof(Genre.Id),nameof(Genre.Name))">
                         </select>
                         <span asp-validation-for="GenreId"></span>
                     </div>
-                    <div class="mb-3 col-md-6">
+                    <div class="mb-3 col-md-4">
                         <label asp-for="AuthorId" class="form-label">Author</label>
                         <select asp-for="AuthorId" class="form-select" asp-items="new SelectList((List<Author>)ViewBag.Authors,nameof(Author.Id),nameof(Author.FullName))">
                         </select>
                         <span asp-validation-for="AuthorId"></span>
                     </div>
+                    <div class="mb-3 col-md-4">
+                    <label asp-for="TagIds" class="form-label">Tag</label>
+                    <select asp-for="TagIds" class="form-select" asp-items="new SelectList((List<Tag>)ViewBag.Tags,nameof(Tag.Id),nameof(Tag.Name))">
+                    </select>
+                    <span asp-validation-for="TagIds"></span>
                 </div>
-                <div class="row">
+                </div>
+                <div class="row mt-3">
                     <div class="mb-3 col-md-4">
                         <label asp-for="CostPrice" class="form-label">CostPrice</label>
                         <input asp-for="CostPrice" class="form-control text-light">
@@ -71,6 +77,21 @@
                     <label asp-for="Desc" class="form-label">Desc</label>
                     <textarea asp-for="Desc" class="form-control text-light"></textarea>
                     <span asp-validation-for="Desc"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PosterFile" class="form-label">PosterFile</label>
+                    <input asp-for="PosterFile"/>
+                    <span class="text-light" asp-validation-for="PosterFile"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="HoverFile" class="form-label">HoverFile</label>
+                    <input asp-for="HoverFile"/>
+                    <span asp-validation-for="HoverFile"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageFiles" class="form-label">ImageFiles</label>
+                    <input asp-for="ImageFiles" type="file" multiple="multiple" />
+                    <span asp-validation-for="ImageFiles"></span>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

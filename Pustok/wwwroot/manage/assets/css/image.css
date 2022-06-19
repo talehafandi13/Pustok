@@ -1,0 +1,14 @@
+﻿.book-image{
+    position:relative;
+    display:inline-block;
+    margin: 10px 3px;
+}  
+
+.book-image span{
+    position:absolute;
+    top:-14px;
+    right:-6px;
+    color: red;
+    cursor:pointer;
+    font-size: 20px;
+}
