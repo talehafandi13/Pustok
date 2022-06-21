@@ -1,0 +1,39 @@
+﻿@model MemberRegisterViewModel
+
+<form asp-action="register" method="post">
+    <div class="login-form">
+        <h4 class="login-title">New Customer</h4>
+        <p><span class="font-weight-bold">I am a new customer</span></p>
+        <div class="row">
+            <div class="col-md-12 col-12 mb--15">
+                <label asp-for="Fullname">Full Name</label>
+                <input class="mb-0 form-control" asp-for="Fullname" placeholder="Enter your full name">
+                <span class="text-danger" asp-validation-for="Fullname"></span>
+            </div>
+            <div class="col-12 mb--20">
+                <label asp-for="Username">Username</label>
+                <input class="mb-0 form-control" asp-for="Username" placeholder="Enter Your Username Here..">
+                <span class="text-danger" asp-validation-for="Username"></span>
+            </div>
+            <div class="col-12 mb--20">
+                <label asp-for="Email">Email</label>
+                <input class="mb-0 form-control" asp-for="Email" placeholder="Enter Your Email Address Here..">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="col-lg-6 mb--20">
+                <label asp-for="Password">Password</label>
+                <input class="mb-0 form-control" asp-for="Password" placeholder="Enter your password">
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+            <div class="col-lg-6 mb--20">
+                <label asp-for="ConfirmPassword">Repeat Password</label>
+                <input class="mb-0 form-control" asp-for="ConfirmPassword" placeholder="Repeat your password">
+                <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-outlined">Register</button>
+            </div>
+        </div>
+    </div>
+</form>

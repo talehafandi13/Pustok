@@ -31,6 +31,10 @@ namespace Pustok.Controllers
 
             return View(homeVM);
         }
+        public IActionResult Error()
+        {
+            return View();
+        }
 
     }
 }

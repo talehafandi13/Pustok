@@ -1,7 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+    @inject UserManager<AppUser> _userManager
+    @{
+        AppUser logged = null;
+        if (User.Identity.IsAuthenticated)
+        {
+            logged = _userManager.Users.FirstOrDefault(x=>!x.IsAdmin && x.UserName == User.Identity.Name);
+        }
+    }
+
+<!DOCTYPE html>
 <html lang="zxx">
-
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -322,8 +330,16 @@
                             <div class="main-navigation flex-lg-right">
                                 <div class="cart-widget">
                                     <div class="login-block">
-                                        <a href="login-register.html" class="font-weight-bold">Login</a> <br>
-                                        <span>or</span><a href="login-register.html">Register</a>
+                                        @if (logged!=null)
+                                        {
+                                            <a asp-action="index" asp-controller="home" class="font-weight-bold">@logged.UserName</a> <br>
+                                            <span>or</span><a asp-action="logout" asp-controller="account">Log out</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-action="login" asp-controller="account" class="font-weight-bold">Login</a> <br>
+                                            <span>or</span><a asp-action="register" asp-controller="account">Register</a>
+                                        }
                                     </div>
                                     <div class="cart-block">
                                         <div class="cart-total">

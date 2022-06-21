@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Taleh\\source\\repos\\Pustok\\Pustok\\Pustok.csproj": {}
+    "C:\\Users\\Taleh\\Desktop\\Pustok\\Pustok\\Pustok.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Taleh\\source\\repos\\Pustok\\Pustok\\Pustok.csproj": {
+    "C:\\Users\\Taleh\\Desktop\\Pustok\\Pustok\\Pustok.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taleh\\source\\repos\\Pustok\\Pustok\\Pustok.csproj",
+        "projectUniqueName": "C:\\Users\\Taleh\\Desktop\\Pustok\\Pustok\\Pustok.csproj",
         "projectName": "Pustok",
-        "projectPath": "C:\\Users\\Taleh\\source\\repos\\Pustok\\Pustok\\Pustok.csproj",
+        "projectPath": "C:\\Users\\Taleh\\Desktop\\Pustok\\Pustok\\Pustok.csproj",
         "packagesPath": "C:\\Users\\Taleh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Taleh\\source\\repos\\Pustok\\Pustok\\obj\\",
+        "outputPath": "C:\\Users\\Taleh\\Desktop\\Pustok\\Pustok\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Taleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.26, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.26, )"
