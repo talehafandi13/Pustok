@@ -1,0 +1,31 @@
+﻿@model BookCommentViewModel
+
+<p class="d-block">Your Rating</p>
+<span class="rating-widget-block">
+    <input type="radio" form="postcomment" name="rate" id="star1"  value="5">
+    <label for="star1"></label>
+    <input type="radio" form="postcomment" name="rate"  id="star2" value="4" >
+    <label for="star2"></label>
+    <input type="radio" form="postcomment" name="rate"  id="star3" value="3">
+    <label for="star3"></label>
+    <input type="radio" form="postcomment" name="rate" id="star4" value="2">
+    <label for="star4"></label>
+    <input type="radio" form="postcomment" name="rate" id="star5" value="1">
+    <label for="star5"></label>
+</span>
+<form asp-action="comment" asp-controller="book" id="postcomment" class="mt--15 site-form ">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label asp-for="Text">Comment</label>
+                <textarea asp-for="Text" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="submit-btn">
+                <button type="submit" class="btn btn-black">Post Comment</button>
+            </div>
+        </div>
+        <input type="hidden" asp-for="@Model.BookId" />
+    </div>
+</form>

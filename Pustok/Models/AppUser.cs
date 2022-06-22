@@ -9,7 +9,6 @@ namespace Pustok.Models
 {
     public class AppUser:IdentityUser
     {
-        
         public string Fullname { get; set; }
         [Required]
         public bool IsAdmin { get; set; }

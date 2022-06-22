@@ -17,11 +17,11 @@
         <div class="single-slide">
             <div class="product-card">
                 <div class="product-header">
-                    <a href="#" class="author">
+                    <a asp-action="detail" asp-controller="book" asp-route-id="@book.Id" class="author">
                         @book.Author.FullName
                     </a>
                     <h3>
-                        <a href="product-details.html">
+                        <a asp-action="detail" asp-controller="book" asp-route-id="@book.Id">
                             @book.Name
                         </a>
                     </h3>

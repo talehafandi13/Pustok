@@ -40,5 +40,6 @@ namespace Pustok.Models
         public IFormFile PosterFile { get; set; }
         [NotMapped]
         public IFormFile HoverFile { get; set; }
+        public List<BookComment> BookComments { get; set; }
     }
 }
